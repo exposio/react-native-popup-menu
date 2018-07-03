@@ -200,7 +200,7 @@ export default class MenuProvider extends Component {
     const { style, customStyles } = this.props;
     debug('render menu', this.isMenuOpen(), this._ownLayout);
     return (
-      <PopupMenuContext.Provider value={this.menuCtx}>
+      <PopupMenuContext.Provider value={this.menuCtx} accessible={false}>
         <View style={{flex:1}} onLayout={this._onLayout}>
           <View style={[
             {flex:1},
